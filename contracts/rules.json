@@ -1,0 +1,22 @@
+{
+  "name": "Global Design Rules",
+  "description": "プロジェクト全体に適用される禁止ルールおよび制約",
+  "forbiddenStyles": [
+    "margin",
+    "margin-top",
+    "margin-bottom",
+    "margin-left",
+    "margin-right",
+    "float",
+    "clear"
+  ],
+  "allowedUnits": {
+    "spacing": ["rem"],
+    "fontSize": ["rem", "em"],
+    "border": ["px"]
+  },
+  "a11y": {
+    "minimumContrastRatio": 4.5,
+    "requireFocusVisible": true
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "color": {
+    "base": {
+      "blue": {
+        "50":  { "$value": "#eff6ff", "$type": "color" },
+        "500": { "$value": "#3b82f6", "$type": "color" },
+        "600": { "$value": "#2563eb", "$type": "color" },
+        "900": { "$value": "#1e3a8a", "$type": "color" }
+      },
+      "gray": {
+        "50":  { "$value": "#f9fafb", "$type": "color" },
+        "500": { "$value": "#6b7280", "$type": "color" },
+        "900": { "$value": "#111827", "$type": "color" }
+      },
+      "white": { "$value": "#ffffff", "$type": "color" },
+      "black": { "$value": "#000000", "$type": "color" }
+    }
+  },
+  "spacing": {
+    "base": {
+      "1": { "$value": "0.25rem", "$type": "dimension" },
+      "2": { "$value": "0.5rem", "$type": "dimension" },
+      "4": { "$value": "1rem", "$type": "dimension" },
+      "8": { "$value": "2rem", "$type": "dimension" }
+    }
+  }
+}

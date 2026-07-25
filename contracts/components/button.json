@@ -1,0 +1,40 @@
+{
+  "name": "Button",
+  "description": "システム全体で共通使用されるボタンコンポーネント",
+  "allowedStates": [
+    "default",
+    "hover",
+    "active",
+    "focus-visible",
+    "disabled",
+    "loading"
+  ],
+  "variants": [
+    "solid",
+    "outline",
+    "ghost"
+  ],
+  "sizes": [
+    "sm",
+    "md",
+    "lg"
+  ],
+  "tokens": {
+    "bg": {
+      "default": { "$value": "{color.bg.primary}", "$type": "color" },
+      "hover": { "$value": "{color.bg.primaryHover}", "$type": "color" }
+    },
+    "text": {
+      "default": { "$value": "{color.text.inverse}", "$type": "color" }
+    },
+    "paddingX": {
+      "sm": { "$value": "{size.spacing.sm}", "$type": "dimension" },
+      "md": { "$value": "{size.spacing.md}", "$type": "dimension" }
+    }
+  },
+  "forbiddenStyles": [],
+  "a11y": {
+    "requiredRoles": ["button"],
+    "keyboardEvents": ["Enter", "Space"]
+  }
+}
