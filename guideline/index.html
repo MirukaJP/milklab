@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Design Guidelines</title>
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="sidebar">
+    <h2>Design System</h2>
+    <nav>
+      <a href="#colors" class="active">Colors</a>
+      <a href="#spacing">Spacing</a>
+      <a href="#components">Components</a>
+    </nav>
+  </div>
+  
+  <main class="content">
+    <header>
+      <h1>Design Guidelines</h1>
+      <p>このページは <code>contracts/</code> 配下の JSON 定義から自動生成された Design Tokens と UI Component のライブプレビューです。</p>
+    </header>
+
+    <section id="colors">
+      <h2>Color Palette (Primitive)</h2>
+      <div class="palette-grid" id="palette-grid">
+        <!-- Rendered by JS -->
+      </div>
+      
+      <h2 style="margin-top: 3rem;">Semantic Colors</h2>
+      <div class="semantic-list" id="semantic-list">
+        <!-- Rendered by JS -->
+      </div>
+    </section>
+    
+    <section id="components" style="margin-top: 4rem;">
+      <h2>Components Preview</h2>
+      <div class="component-preview">
+        <button class="btn btn-default">Default Button</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
