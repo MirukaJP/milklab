@@ -3,7 +3,7 @@
     "base": {
       "blue": {
         "50":  { "$value": "#eff6ff", "$type": "color" },
-        "500": { "$value": "#3b82f6", "$type": "color" },
+        "500": { "$value": "#2563eb", "$type": "color" },
         "600": { "$value": "#2563eb", "$type": "color" },
         "900": { "$value": "#1e3a8a", "$type": "color" }
       },

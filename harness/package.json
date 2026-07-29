@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "validate": "tsx validator.ts",
+    "validate": "tsx validator.ts && tsx a11y-validator.ts",
     "build": "tsx transpilers/css-variables.ts",
     "start": "npm run validate && npm run build"
   },
