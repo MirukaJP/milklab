@@ -1,0 +1,30 @@
+/* Auto-generated Design Tokens */
+:root {
+  --color-base-blue-50: #eff6ff;
+  --color-base-blue-500: #3b82f6;
+  --color-base-blue-600: #2563eb;
+  --color-base-blue-900: #1e3a8a;
+  --color-base-gray-50: #f9fafb;
+  --color-base-gray-500: #6b7280;
+  --color-base-gray-900: #111827;
+  --color-base-white: #ffffff;
+  --color-base-black: #000000;
+  --spacing-base-1: 0.25rem;
+  --spacing-base-2: 0.5rem;
+  --spacing-base-4: 1rem;
+  --spacing-base-8: 2rem;
+  --color-bg-default: #ffffff;
+  --color-bg-primary: #3b82f6;
+  --color-bg-primaryHover: #2563eb;
+  --color-text-default: #111827;
+  --color-text-inverse: #ffffff;
+  --color-text-muted: #6b7280;
+  --size-spacing-sm: 0.5rem;
+  --size-spacing-md: 1rem;
+  --size-spacing-lg: 2rem;
+  --button-bg-default: #3b82f6;
+  --button-bg-hover: #2563eb;
+  --button-text-default: #ffffff;
+  --button-paddingX-sm: 0.5rem;
+  --button-paddingX-md: 1rem;
+}
