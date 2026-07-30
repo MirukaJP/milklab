@@ -1,4 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
+  console.log('Guideline Portal Initialized.');
+  
+  const themeSelect = document.getElementById('theme-select');
+  if (themeSelect) {
+    themeSelect.addEventListener('change', (e) => {
+      document.documentElement.setAttribute('data-theme', e.target.value);
+    });
+  }
+
   // 抽出したいトークン名のリスト (デモ用)
   const primitiveColors = [
     '--color-base-blue-50',
