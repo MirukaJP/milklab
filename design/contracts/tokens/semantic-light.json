@@ -1,14 +1,15 @@
 {
   "color": {
     "bg": {
-      "default": { "$value": "{color.base.white}", "$type": "color", "$description": "メイン背景色" },
-      "primary": { "$value": "{color.base.blue.500}", "$type": "color", "$description": "プライマリアクション背景色" },
-      "primaryHover": { "$value": "{color.base.blue.600}", "$type": "color", "$description": "プライマリアクション(Hover時)" }
+      "default": { "$value": "{color.base.milk.200}", "$type": "color", "$description": "メイン背景色" },
+      "primary": { "$value": "{color.base.freshBlue.600}", "$type": "color", "$description": "プライマリアクション背景色" },
+      "primaryHover": { "$value": "{color.base.freshBlue.700}", "$type": "color", "$description": "プライマリアクション(Hover時)" },
+      "glass": { "$value": "{color.base.milk.glass}", "$type": "color", "$description": "すりガラス背景" }
     },
     "text": {
-      "default": { "$value": "{color.base.gray.900}", "$type": "color" },
-      "inverse": { "$value": "{color.base.white}", "$type": "color" },
-      "muted": { "$value": "{color.base.gray.500}", "$type": "color" }
+      "default": { "$value": "{color.base.espresso.900}", "$type": "color" },
+      "inverse": { "$value": "{color.base.milk.100}", "$type": "color" },
+      "muted": { "$value": "{color.base.espresso.500}", "$type": "color" }
     }
   },
   "size": {

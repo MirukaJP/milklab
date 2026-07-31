@@ -30,6 +30,9 @@
     "paddingX": {
       "sm": { "$value": "{size.spacing.sm}", "$type": "dimension" },
       "md": { "$value": "{size.spacing.md}", "$type": "dimension" }
+    },
+    "radius": {
+      "default": { "$value": "{borderRadius.base.fluid}", "$type": "dimension" }
     }
   },
   "forbiddenStyles": [],
