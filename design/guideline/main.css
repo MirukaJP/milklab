@@ -6,6 +6,25 @@
   --border-color: #e5e7eb;
 }
 
+[data-theme="dark"] {
+  --bg-color: #1a1511;
+  --sidebar-bg: #221d19;
+  --text-main: #f9fafb;
+  --text-sub: #9ca3af;
+  --border-color: #3f352e;
+}
+
+/* Background Layer to prevent layout thrashing */
+.bg-layer {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background-color: var(--color-bg-default);
+  background-image: radial-gradient(circle at top right, rgba(74, 144, 226, 0.15) 0%, transparent 60%),
+                    radial-gradient(circle at bottom left, rgba(44, 123, 214, 0.08) 0%, transparent 60%);
+  transition: background-color 0.4s ease;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -174,15 +193,45 @@ h2 {
   margin-top: 0.25rem;
 }
 
-/* Component Preview */
+/* Component Preview Area */
 .component-preview {
   padding: 3rem;
-  background: #fff;
-  border: 1px dashed #ccc;
+  background: var(--sidebar-bg);
+  border: 1px dashed var(--border-color);
   border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/* Milky Glass Demo */
+.demo-area {
+  padding: 3rem;
+  margin: 2rem 0;
+  border-radius: 20px;
+  background: repeating-linear-gradient(45deg, rgba(120, 120, 120, 0.05), rgba(120, 120, 120, 0.05) 10px, transparent 10px, transparent 20px);
+}
+
+.glass-card {
+  background: var(--color-bg-glass);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 2.5rem;
+  border-radius: var(--borderRadius-base-soft, 16px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
+  transform: translateZ(0); /* Hardware acceleration to prevent flickering */
+  color: var(--color-text-default);
+}
+
+.glass-card h2 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.glass-card p {
+  color: var(--color-text-muted);
+  margin-bottom: 2rem;
 }
 
 /* 
@@ -195,19 +244,21 @@ h2 {
   align-items: center;
   justify-content: center;
   border: none;
-  border-radius: 6px;
   font-family: inherit;
-  font-weight: 500;
+  font-weight: 600;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   
   /* Component Tokens */
   background-color: var(--button-bg-default);
   color: var(--button-text-default);
-  padding: 0.75rem var(--button-paddingX-md);
+  padding: var(--button-paddingX-md) calc(var(--button-paddingX-md) * 2);
+  border-radius: var(--button-radius-default);
   font-size: 0.95rem;
 }
 
 .btn:hover {
   background-color: var(--button-bg-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }

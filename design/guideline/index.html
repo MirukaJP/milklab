@@ -13,11 +13,14 @@
 </head>
 
 <body>
+  <!-- 背景描画ループ回避用レイヤー -->
+  <div class="bg-layer"></div>
+
   <div class="sidebar">
     <h2>Design System</h2>
     <nav>
-      <a href="#colors" class="active">Colors</a>
-      <a href="#spacing">Spacing</a>
+      <a href="#demo" class="active">Milky Glass</a>
+      <a href="#colors">Colors</a>
       <a href="#components">Components</a>
     </nav>
   </div>
@@ -36,7 +39,7 @@
     </header>
 
     <!-- Milky Glass Demo Area -->
-    <section class="demo-area">
+    <section id="demo" class="demo-area">
       <div class="glass-card">
         <h2>Milky Glass Theme</h2>
         <p>Milk White or Espresso Black backgrounds with glassmorphism blur.</p>
@@ -44,84 +47,32 @@
       </div>
     </section>
 
-    <section class="tokens-section">
+    <section id="colors" style="margin-top: 4rem;">
+      <h2>Color Palette (Primitive)</h2>
+      <div class="palette-grid" id="palette-grid">
+        <!-- Rendered by JS -->
+      </div>
+
+      <h2 style="margin-top: 3rem;">Semantic Colors</h2>
+      <div class="semantic-list" id="semantic-list">
+        <!-- Rendered by JS -->
+      </div>
+    </section>
+
+    <section id="components" style="margin-top: 4rem;">
+      <h2>Components Preview</h2>
+      <div class="component-preview">
+        <button class="btn btn-default">Default Button</button>
+      </div>
+    </section>
+
+    <section class="tokens-section" style="margin-top: 4rem;">
       <h2>Tokens Preview (Raw values)</h2>
       <pre id="tokens-output"></pre>
     </section>
   </main>
 
-  <style>
-    /* CSSの描画ループ調査のため一時的にコメントアウト
-    body {
-      background-color: var(--color-bg-default);
-      color: var(--color-text-default);
-      transition: background-color 0.3s, color 0.3s;
-      background-image: radial-gradient(circle at top right, rgba(74, 144, 226, 0.2) 0%, transparent 60%),
-        radial-gradient(circle at bottom left, rgba(44, 123, 214, 0.1) 0%, transparent 60%);
-      background-attachment: fixed;
-    }
-
-    .demo-area {
-      padding: 40px;
-      margin: 20px 0;
-      border-radius: 20px;
-      background: repeating-linear-gradient(45deg, rgba(120, 120, 120, 0.05), rgba(120, 120, 120, 0.05) 10px, transparent 10px, transparent 20px);
-    }
-
-    .glass-card {
-      background: var(--color-bg-glass);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      padding: var(--size-spacing-lg);
-      border-radius: var(--borderRadius-base-soft);
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
-    }
-
-    .glass-card h2 {
-      margin-top: 0;
-    }
-
-    .btn {
-      background-color: var(--button-bg-default);
-      color: var(--button-text-default);
-      padding: var(--button-paddingX-md) calc(var(--button-paddingX-md) * 2);
-      border: none;
-      border-radius: var(--button-radius-default);
-      font-size: 1rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: background-color 0.2s, transform 0.1s;
-    }
-
-    .btn:hover {
-      background-color: var(--button-bg-hover);
-      transform: translateY(-2px);
-    }
-    */
-  </style>
-
-  <section id="colors">
-    <h2>Color Palette (Primitive)</h2>
-    <div class="palette-grid" id="palette-grid">
-      <!-- Rendered by JS -->
-    </div>
-
-    <h2 style="margin-top: 3rem;">Semantic Colors</h2>
-    <div class="semantic-list" id="semantic-list">
-      <!-- Rendered by JS -->
-    </div>
-  </section>
-
-  <section id="components" style="margin-top: 4rem;">
-    <h2>Components Preview</h2>
-    <div class="component-preview">
-      <button class="btn btn-default">Default Button</button>
-    </div>
-  </section>
-  </main>
-
-  <!-- <script src="app.js"></script> -->
+  <script src="app.js"></script>
 </body>
 
 </html>
