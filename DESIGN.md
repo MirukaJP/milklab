@@ -11,7 +11,8 @@
 システムの一貫性は、以下の3層構造によって維持されます。
 
 * **Layer 1: 憲法 (DESIGN.md)** - 本ドキュメント。思想と大原則。
-* **Layer 2: 仕様 (Contracts)** - `/contracts/` に配置されるJSONファイル群。デザイン意図の「唯一の真実情報 (Single Source of Truth)」。
+* **Layer 2: 仕様 (Contracts)** - `/design/contracts/` に配置される仕様ファイル群。デザイン意図の「唯一の真実情報 (Single Source of Truth)」。
+  * ※ プロジェクト（ブランド）個別のコンセプトや意図については、必ず [design/contracts/brand.md](file:///Users/Miruka/workspace/milklab/design/contracts/brand.md) を参照すること。
 * **Layer 3: 検証 (Harness)** - `/harness/` に配置されるスクリプト群。Contracts の制約を実装コードに対して検証するエンジン。
 
 ## 3. AI / エージェント・ディレクティブ (AI Directives)
