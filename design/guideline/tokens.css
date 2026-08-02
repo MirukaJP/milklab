@@ -24,6 +24,7 @@
   --color-base-latte-700: #706051;
   --color-base-latte-800: #554a3e;
   --color-base-latte-900: #3d352c;
+  --color-base-latte-950: #29231d;
   --color-base-sky-50: #f0f7ff;
   --color-base-sky-100: #e0effe;
   --color-base-sky-200: #bae2fd;
@@ -45,6 +46,7 @@
   --color-base-toast-700: #a6500c;
   --color-base-toast-800: #854112;
   --color-base-toast-900: #6c3614;
+  --color-base-toast-950: #48220c;
   --color-base-berry-50: #fff0f3;
   --color-base-berry-100: #ffe3e9;
   --color-base-berry-200: #ffccd7;
@@ -55,6 +57,7 @@
   --color-base-berry-700: #bc1038;
   --color-base-berry-800: #9c1231;
   --color-base-berry-900: #83152d;
+  --color-base-berry-950: #530b1b;
   --color-base-herb-50: #f0faf4;
   --color-base-herb-100: #def7e8;
   --color-base-herb-200: #bcedd2;
@@ -65,6 +68,7 @@
   --color-base-herb-700: #146b49;
   --color-base-herb-800: #14563d;
   --color-base-herb-900: #134734;
+  --color-base-herb-950: #0c281d;
   --color-base-lavender-50: #f6f3fc;
   --color-base-lavender-100: #eee7f9;
   --color-base-lavender-200: #dfd2f3;
