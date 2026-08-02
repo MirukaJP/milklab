@@ -8,15 +8,16 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 抽出したいトークン名のリスト (デモ用)
+  // 抽出してプレビュー描画するPrimitiveトークン名のリスト
   const primitiveColors = [
-    '--color-base-blue-50',
-    '--color-base-blue-500',
-    '--color-base-blue-600',
-    '--color-base-blue-900',
-    '--color-base-gray-50',
-    '--color-base-gray-500',
-    '--color-base-gray-900'
+    '--color-base-milk-50', '--color-base-milk-100', '--color-base-milk-200', '--color-base-milk-300', '--color-base-milk-400', '--color-base-milk-glass',
+    '--color-base-espresso-500', '--color-base-espresso-600', '--color-base-espresso-700', '--color-base-espresso-800', '--color-base-espresso-900', '--color-base-espresso-950', '--color-base-espresso-glass',
+    '--color-base-latte-50', '--color-base-latte-100', '--color-base-latte-200', '--color-base-latte-300', '--color-base-latte-400', '--color-base-latte-500', '--color-base-latte-600', '--color-base-latte-700', '--color-base-latte-800', '--color-base-latte-900',
+    '--color-base-sky-50', '--color-base-sky-100', '--color-base-sky-200', '--color-base-sky-300', '--color-base-sky-400', '--color-base-sky-500', '--color-base-sky-600', '--color-base-sky-700', '--color-base-sky-800', '--color-base-sky-900', '--color-base-sky-950',
+    '--color-base-toast-50', '--color-base-toast-100', '--color-base-toast-200', '--color-base-toast-300', '--color-base-toast-400', '--color-base-toast-500', '--color-base-toast-600', '--color-base-toast-700', '--color-base-toast-800', '--color-base-toast-900',
+    '--color-base-berry-50', '--color-base-berry-100', '--color-base-berry-200', '--color-base-berry-300', '--color-base-berry-400', '--color-base-berry-500', '--color-base-berry-600', '--color-base-berry-700', '--color-base-berry-800', '--color-base-berry-900',
+    '--color-base-herb-50', '--color-base-herb-100', '--color-base-herb-200', '--color-base-herb-300', '--color-base-herb-400', '--color-base-herb-500', '--color-base-herb-600', '--color-base-herb-700', '--color-base-herb-800', '--color-base-herb-900',
+    '--color-base-lavender-50', '--color-base-lavender-100', '--color-base-lavender-200', '--color-base-lavender-300', '--color-base-lavender-400', '--color-base-lavender-500', '--color-base-lavender-600', '--color-base-lavender-700', '--color-base-lavender-800', '--color-base-lavender-900', '--color-base-lavender-950'
   ];
 
   const semanticColors = [
