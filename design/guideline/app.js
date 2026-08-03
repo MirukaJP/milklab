@@ -114,12 +114,20 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       title: '📐 Border & Dividers (境界線・アウトライン)',
-      desc: '空間と UI の輪郭を引き締めたり、ステータスを際立たせる線定義。枠線サンプルで表示します',
+      desc: '空間と UI の輪郭を引き締めたり、ステータスを際立たせる充実した線定義。枠線サンプルで体感いただけます',
       tokens: [
         { var: '--color-border-default', desc: '標準的な区切り線・コンポーネント枠 (Default)' },
         { var: '--color-border-muted', desc: 'さらに控えめな極薄ミュート区切り線 (Muted)' },
         { var: '--color-border-focus', desc: 'キーボードフォーカス・選択アウトライン (Sky)' },
-        { var: '--color-border-danger', desc: 'エラー・入力バリデーション失敗枠 (Berry)' }
+        { var: '--color-border-primary', desc: 'プライマリ選択・強調フレーム線 (Sky)' },
+        { var: '--color-border-success', desc: '成功・安全ステータス枠線 (Herb)' },
+        { var: '--color-border-success-muted', desc: '成功バッジ・通知用ミュート枠線 (Herb Muted)' },
+        { var: '--color-border-warning', desc: '注意・警告ステータス枠線 (Toast)' },
+        { var: '--color-border-warning-muted', desc: '注意バッジ・アラート用ミュート枠線 (Toast Muted)' },
+        { var: '--color-border-danger', desc: '危険・バリデーションエラー枠 (Berry)' },
+        { var: '--color-border-danger-muted', desc: 'エラーバッジ・ソフトアラートミュート枠線 (Berry Muted)' },
+        { var: '--color-border-accent', desc: '特別フィーチャー・AI装飾アクセント枠 (Lavender)' },
+        { var: '--color-border-accent-muted', desc: 'アクセント用優しいミュート枠線 (Lavender Muted)' }
       ]
     },
     {

@@ -30,7 +30,15 @@
       "default": { "$value": "{color.base.espresso.700}", "$type": "color", "$description": "標準的な区切り線・コンポーネント枠(Espresso 700)" },
       "muted": { "$value": "{color.base.espresso.800}", "$type": "color", "$description": "さらに控えめな極深ミュート区切り線(Espresso 800)" },
       "focus": { "$value": "{color.base.sky.400}", "$type": "color", "$description": "キーボードフォーカス・選択時のアウトライン" },
-      "danger": { "$value": "{color.base.berry.500}", "$type": "color", "$description": "エラー時・バリデーション失敗時の枠線" }
+      "primary": { "$value": "{color.base.sky.400}", "$type": "color", "$description": "プライマリアクション・選択中タブ等の強調グロウ枠" },
+      "success": { "$value": "{color.base.herb.400}", "$type": "color", "$description": "成功・安全・完了ステータスの枠線" },
+      "success-muted": { "$value": "{color.base.herb.800}", "$type": "color", "$description": "成功バッジ・通知用の深いミュート枠線" },
+      "warning": { "$value": "{color.base.toast.400}", "$type": "color", "$description": "注意・警告を表す明瞭なゴールド枠線" },
+      "warning-muted": { "$value": "{color.base.toast.800}", "$type": "color", "$description": "注意・警告バッジ用深いミュート枠線" },
+      "danger": { "$value": "{color.base.berry.400}", "$type": "color", "$description": "エラー・バリデーション失敗時の明快な赤枠線" },
+      "danger-muted": { "$value": "{color.base.berry.800}", "$type": "color", "$description": "危険・エラー用バッジの深いミュート枠" },
+      "accent": { "$value": "{color.base.lavender.400}", "$type": "color", "$description": "AI機能や特別装飾を際立てるアクセント枠" },
+      "accent-muted": { "$value": "{color.base.lavender.800}", "$type": "color", "$description": "アクセント用の深いミュート枠線" }
     },
     "state": {
       "hover": { "$value": "rgba(255, 255, 255, 0.12)", "$type": "color", "$description": "ホバー時に被せる月色のような半透明グロウベール" },
