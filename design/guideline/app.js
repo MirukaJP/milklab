@@ -132,10 +132,10 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       title: '🎭 State Layers (半透明インタラクション・ベール)',
-      desc: 'あらゆるボタン・コンポーネントの上に優しく重なり、触覚的リプライを生み出す光と影の半透明レイヤー',
+      desc: '無機質な黒の影を排し、システム根幹の Espresso-900 や Milk 50 をベースにした温かみ溢れる光と影の半透明レイヤー',
       tokens: [
-        { var: '--color-state-hover', desc: 'ホバー時ベール (Lightは静かな影、Darkは月光のような白ツヤ)' },
-        { var: '--color-state-active', desc: 'アクティブ・クリック時のベール (しっかりした押しごたえ)' }
+        { var: '--color-state-hover', desc: 'ホバー時ベール (Light は Espresso-900 由来の芳醇で深い影、Dark は月光のような Milk ツヤ)' },
+        { var: '--color-state-active', desc: 'アクティブ・クリック時のベール (しっかりした心地よい手応え)' }
       ]
     }
   ];

@@ -41,8 +41,8 @@
       "accent-muted": { "$value": "{color.base.lavender.200}", "$type": "color", "$description": "アクセント用の優しいミュート枠線" }
     },
     "state": {
-      "hover": { "$value": "rgba(0, 0, 0, 0.06)", "$type": "color", "$description": "ホバー時に被せる極薄い半透明シャドウベール" },
-      "active": { "$value": "rgba(0, 0, 0, 0.12)", "$type": "color", "$description": "アクティブ・クリック時に被せる半透明シャドウベール" }
+      "hover": { "$value": "rgba(43, 32, 23, 0.06)", "$type": "color", "$description": "ホバー時に被せる Espresso-900 ベースの優しく温かい半透明シャドウベール" },
+      "active": { "$value": "rgba(43, 32, 23, 0.12)", "$type": "color", "$description": "アクティブ・クリック時に被せる Espresso-900 ベースの半透明シャドウベール" }
     }
   },
   "size": {

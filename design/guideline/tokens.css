@@ -114,14 +114,14 @@
   --color-border-danger-muted: #ffccd7;
   --color-border-accent: #8a5cd2;
   --color-border-accent-muted: #dfd2f3;
-  --color-state-hover: rgba(0, 0, 0, 0.06);
-  --color-state-active: rgba(0, 0, 0, 0.12);
+  --color-state-hover: rgba(43, 32, 23, 0.06);
+  --color-state-active: rgba(43, 32, 23, 0.12);
   --size-spacing-sm: 0.5rem;
   --size-spacing-md: 1rem;
   --size-spacing-lg: 2rem;
   --button-bg-default: #1854bc;
-  --button-state-hover: rgba(0, 0, 0, 0.06);
-  --button-state-active: rgba(0, 0, 0, 0.12);
+  --button-state-hover: rgba(43, 32, 23, 0.06);
+  --button-state-active: rgba(43, 32, 23, 0.12);
   --button-text-default: #fefcf9;
   --button-paddingX-sm: 0.5rem;
   --button-paddingX-md: 1rem;
