@@ -202,44 +202,116 @@ h2 {
   line-height: 1.1;
 }
 
-/* Semantic List */
-.semantic-list {
+/* Semantic Groups & Cards */
+.semantic-groups-container {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 2.5rem;
 }
 
-.semantic-item {
+.semantic-group-section {
+  background: var(--sidebar-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 1.75rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+}
+
+.semantic-group-header {
+  margin-bottom: 1.5rem;
+}
+
+.semantic-group-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin: 0 0 0.35rem 0;
+  color: var(--text-main);
+}
+
+.semantic-group-desc {
+  font-size: 0.88rem;
+  color: var(--text-sub);
+  margin: 0;
+}
+
+.semantic-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+
+.semantic-card {
   display: flex;
   align-items: center;
   padding: 1rem;
-  background: #fff;
-  border-radius: 8px;
+  background: var(--bg-color);
+  border-radius: 12px;
   border: 1px solid var(--border-color);
+  gap: 1.25rem;
 }
 
-.semantic-swatch {
-  width: 40px;
-  height: 40px;
+/* スワッチのベース（背景色用、文字色用、ボーダー用で出し分け） */
+.semantic-swatch-wrapper {
+  width: 56px;
+  height: 56px;
+  border-radius: 10px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  position: relative;
+  background: #fff;
+}
+
+[data-theme="dark"] .semantic-swatch-wrapper {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #221d19;
+}
+
+.swatch-text-sample {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  user-select: none;
+}
+
+.swatch-border-sample {
+  width: 76%;
+  height: 76%;
   border-radius: 6px;
-  margin-right: 1.5rem;
-  border: 1px solid rgba(0,0,0,0.1);
 }
 
 .semantic-details {
   flex: 1;
+  min-width: 0;
 }
 
-.semantic-name {
-  font-weight: 500;
-  font-size: 0.95rem;
+.semantic-var-name {
+  font-weight: 600;
+  font-size: 0.88rem;
+  color: var(--text-main);
+  word-break: break-all;
 }
 
-.semantic-value {
+.semantic-description {
+  font-size: 0.78rem;
   color: var(--text-sub);
-  font-size: 0.85rem;
+  margin-top: 0.2rem;
+  line-height: 1.4;
+}
+
+.semantic-hex {
+  color: var(--text-sub);
+  font-size: 0.75rem;
   font-family: monospace;
-  margin-top: 0.25rem;
+  margin-top: 0.3rem;
+  display: inline-block;
+  background: var(--sidebar-bg);
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  border: 1px solid var(--border-color);
 }
 
 /* Component Preview Area */
@@ -284,30 +356,77 @@ h2 {
 }
 
 /* 
-  Button Component Styling 
+  Button Component Styling (State Layer / Transparent Veil)
   Using generated CSS variables from tokens.css
 */
 .btn {
-  /* Layout Harness Defaults */
+  position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border: none;
+  border: 1px solid transparent;
   font-family: inherit;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-  
-  /* Component Tokens */
-  background-color: var(--button-bg-default);
-  color: var(--button-text-default);
-  padding: var(--button-paddingX-md) calc(var(--button-paddingX-md) * 2);
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: var(--button-paddingX-md) calc(var(--button-paddingX-md) * 1.8);
   border-radius: var(--button-radius-default);
   font-size: 0.95rem;
+  overflow: hidden;
+}
+
+/* 半透明ベール（Interaction State Overlay） */
+.btn::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background-color: transparent;
+  transition: background-color 0.18s ease;
+  pointer-events: none;
+}
+
+.btn:hover::after {
+  background-color: var(--button-state-hover, var(--color-state-hover));
+}
+
+.btn:active::after {
+  background-color: var(--button-state-active, var(--color-state-active));
 }
 
 .btn:hover {
-  background-color: var(--button-bg-hover);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+.btn:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+/* Color Variants using exact same State Veil */
+.btn-primary {
+  background-color: var(--button-bg-default);
+  color: var(--button-text-default);
+}
+
+.btn-success {
+  background-color: var(--color-bg-success);
+  color: var(--color-text-inverse);
+}
+
+.btn-danger {
+  background-color: var(--color-bg-danger);
+  color: var(--color-text-inverse);
+}
+
+.btn-accent {
+  background-color: var(--color-bg-accent);
+  color: var(--color-text-inverse);
+}
+
+.btn-muted {
+  background-color: var(--color-bg-muted);
+  color: var(--color-text-default);
+  border-color: var(--color-border-default);
 }

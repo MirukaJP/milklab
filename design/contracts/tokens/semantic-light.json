@@ -1,15 +1,40 @@
 {
   "color": {
     "bg": {
-      "default": { "$value": "{color.base.milk.200}", "$type": "color", "$description": "メイン背景色" },
-      "primary": { "$value": "{color.base.sky.600}", "$type": "color", "$description": "プライマリアクション背景色" },
-      "primaryHover": { "$value": "{color.base.sky.700}", "$type": "color", "$description": "プライマリアクション(Hover時)" },
-      "glass": { "$value": "{color.base.milk.glass}", "$type": "color", "$description": "すりガラス背景" }
+      "default": { "$value": "{color.base.milk.200}", "$type": "color", "$description": "画面メイン背景" },
+      "surface": { "$value": "{color.base.milk.50}", "$type": "color", "$description": "カード・サイドバーなどの手前レイヤー" },
+      "muted": { "$value": "{color.base.latte.300}", "$type": "color", "$description": "控えめな操作やコンテナの背景(Latte 300)" },
+      "glass": { "$value": "{color.base.milk.glass}", "$type": "color", "$description": "すりガラス背景" },
+      "primary": { "$value": "{color.base.sky.600}", "$type": "color", "$description": "プライマリ・アクション背景" },
+      "success": { "$value": "{color.base.herb.600}", "$type": "color", "$description": "成功・完了ステータス背景" },
+      "success-muted": { "$value": "{color.base.herb.50}", "$type": "color", "$description": "成功・完了のミュート背景(バッジや通知用)" },
+      "warning": { "$value": "{color.base.toast.500}", "$type": "color", "$description": "注意・警告ステータス背景" },
+      "warning-muted": { "$value": "{color.base.toast.50}", "$type": "color", "$description": "注意・警告のミュート背景" },
+      "danger": { "$value": "{color.base.berry.600}", "$type": "color", "$description": "危険・エラーステータス背景" },
+      "danger-muted": { "$value": "{color.base.berry.50}", "$type": "color", "$description": "危険・エラーのミュート背景" },
+      "accent": { "$value": "{color.base.lavender.600}", "$type": "color", "$description": "アクセント・AI・特別フィーチャー背景" },
+      "accent-muted": { "$value": "{color.base.lavender.50}", "$type": "color", "$description": "アクセントのミュート背景" }
     },
     "text": {
-      "default": { "$value": "{color.base.espresso.900}", "$type": "color" },
-      "inverse": { "$value": "{color.base.milk.100}", "$type": "color" },
-      "muted": { "$value": "{color.base.latte.700}", "$type": "color" }
+      "default": { "$value": "{color.base.espresso.900}", "$type": "color", "$description": "基本テキスト(Espresso 900)" },
+      "inverse": { "$value": "{color.base.milk.100}", "$type": "color", "$description": "反転テキスト(暗い背景の上用)" },
+      "muted": { "$value": "{color.base.espresso.700}", "$type": "color", "$description": "補助・ミュートテキスト(Espresso 700)" },
+      "disabled": { "$value": "{color.base.latte.400}", "$type": "color", "$description": "無効・退行状態テキスト(Latte 400)" },
+      "primary": { "$value": "{color.base.sky.700}", "$type": "color", "$description": "プライマリテキスト・リンク" },
+      "success": { "$value": "{color.base.herb.700}", "$type": "color", "$description": "成功・健康・安全を表すテキスト" },
+      "warning": { "$value": "{color.base.toast.800}", "$type": "color", "$description": "警告・注意を促すテキスト" },
+      "danger": { "$value": "{color.base.berry.700}", "$type": "color", "$description": "エラー・危険を表すテキスト" },
+      "accent": { "$value": "{color.base.lavender.700}", "$type": "color", "$description": "装飾・特別機能を彩るテキスト" }
+    },
+    "border": {
+      "default": { "$value": "{color.base.latte.300}", "$type": "color", "$description": "標準的な区切り線・コンポーネント枠(Latte 300)" },
+      "muted": { "$value": "{color.base.milk.200}", "$type": "color", "$description": "さらに控えめなミュート区切り線(Milk 200)" },
+      "focus": { "$value": "{color.base.sky.500}", "$type": "color", "$description": "キーボードフォーカス・選択時のアウトライン" },
+      "danger": { "$value": "{color.base.berry.500}", "$type": "color", "$description": "エラー時・バリデーション失敗時の枠線" }
+    },
+    "state": {
+      "hover": { "$value": "rgba(0, 0, 0, 0.06)", "$type": "color", "$description": "ホバー時に被せる極薄い半透明シャドウベール" },
+      "active": { "$value": "rgba(0, 0, 0, 0.12)", "$type": "color", "$description": "アクティブ・クリック時に被せる半透明シャドウベール" }
     }
   },
   "size": {

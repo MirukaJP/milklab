@@ -11,24 +11,16 @@ document.addEventListener('DOMContentLoaded', () => {
   // コンセプトごとにグルーピング・段（行）配置されたPrimitiveトークン設計
   const primitiveColorGroups = [
     {
-      name: '🥛 Milk & ☕ Espresso (Café Bases & Glass)',
-      desc: '朝の新鮮な牛乳と、目覚め・夜想を支えるエスプレッソ（1段目：ソリッドカラー帯、2段目：すりガラスマテリアル）',
+      name: '🥛☕ Café Neutrals (Milk, Latte & Espresso)',
+      desc: '朝のミルク(50-200)、調和するカフェラテ(300-600)、そして深見のビターなエスプレッソ(700-950)を一続きにした、究極に美しい一本のメインキャンバススケール',
       rows: [
         [
-          '--color-base-milk-50', '--color-base-milk-100', '--color-base-milk-200', '--color-base-milk-300', '--color-base-milk-400',
-          '--color-base-espresso-500', '--color-base-espresso-600', '--color-base-espresso-700', '--color-base-espresso-800', '--color-base-espresso-900', '--color-base-espresso-950'
+          '--color-base-milk-50', '--color-base-milk-100', '--color-base-milk-200',
+          '--color-base-latte-300', '--color-base-latte-400', '--color-base-latte-500', '--color-base-latte-600',
+          '--color-base-espresso-700', '--color-base-espresso-800', '--color-base-espresso-900', '--color-base-espresso-950'
         ],
         [
           '--color-base-milk-glass', '--color-base-espresso-glass'
-        ]
-      ]
-    },
-    {
-      name: '🥤 Latte (Café Neutral)',
-      desc: '牛乳とエスプレッソが黄金比で調和する、温もりを持ったシステム全体の本幹グレイスケール',
-      rows: [
-        [
-          '--color-base-latte-50', '--color-base-latte-100', '--color-base-latte-200', '--color-base-latte-300', '--color-base-latte-400', '--color-base-latte-500', '--color-base-latte-600', '--color-base-latte-700', '--color-base-latte-800', '--color-base-latte-900', '--color-base-latte-950'
         ]
       ]
     },
@@ -79,12 +71,65 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   ];
 
-  const semanticColors = [
-    '--color-bg-primary',
-    '--color-bg-primaryHover',
-    '--color-text-default',
-    '--color-text-inverse',
-    '--color-text-muted'
+  const semanticGroups = [
+    {
+      title: '📦 Background & Surface (生活空間とレイヤー)',
+      desc: '画面全体の背景からカード面、そして控えめなコンテナエリア(Muted)の構成',
+      tokens: [
+        { var: '--color-bg-default', desc: 'メイン背景色 (Default)' },
+        { var: '--color-bg-surface', desc: 'カード・サイドバー手前レイヤー (Surface)' },
+        { var: '--color-bg-muted', desc: '控えめなコンテナ背景 (Muted)' },
+        { var: '--color-bg-glass', desc: 'すりガラス素材背景 (Glass)' },
+        { var: '--color-bg-primary', desc: 'プライマリアクション・ボタン背景' }
+      ]
+    },
+    {
+      title: '🛡️ Status & Feature Backgrounds (状態・フィードバック背景)',
+      desc: 'ハーブ・トースト・ベリー・ラベンダーを役割（成功・警告・エラー・アクセント）として割り振った標準背景色およびミュート（バッジ・通知用）背景',
+      tokens: [
+        { var: '--color-bg-success', desc: '成功・安全・完了背景 (Herb)' },
+        { var: '--color-bg-success-muted', desc: '成功のミュート背景・通知タグ用 (Herb Muted)' },
+        { var: '--color-bg-warning', desc: '警告・注意背景 (Toast)' },
+        { var: '--color-bg-warning-muted', desc: '警告のミュート背景 (Toast Muted)' },
+        { var: '--color-bg-danger', desc: '危険・エラー背景 (Berry)' },
+        { var: '--color-bg-danger-muted', desc: 'エラーのミュート背景 (Berry Muted)' },
+        { var: '--color-bg-accent', desc: '特別機能・AIアクセント背景 (Lavender)' },
+        { var: '--color-bg-accent-muted', desc: 'アクセントのミュート背景 (Lavender Muted)' }
+      ]
+    },
+    {
+      title: '✍️ Text & Typography (文字・アイコン色)',
+      desc: '厳格なアクセシビリティを保つテキスト群。色見本は文字「Ag」で体感できます',
+      tokens: [
+        { var: '--color-text-default', desc: '基本テキスト (Default)' },
+        { var: '--color-text-inverse', desc: '反転白系テキスト (Inverse)' },
+        { var: '--color-text-muted', desc: '補助・ミュートテキスト (Muted)' },
+        { var: '--color-text-disabled', desc: '無効・退行テキスト (Disabled)' },
+        { var: '--color-text-primary', desc: 'プライマリオール / リンク (Sky)' },
+        { var: '--color-text-success', desc: '成功・完了文字 (Herb)' },
+        { var: '--color-text-warning', desc: '警告・注意文字 (Toast)' },
+        { var: '--color-text-danger', desc: '危険・エラー文字 (Berry)' },
+        { var: '--color-text-accent', desc: '装飾・アクセント文字 (Lavender)' }
+      ]
+    },
+    {
+      title: '📐 Border & Dividers (境界線・アウトライン)',
+      desc: '空間と UI の輪郭を引き締めたり、ステータスを際立たせる線定義。枠線サンプルで表示します',
+      tokens: [
+        { var: '--color-border-default', desc: '標準的な区切り線・コンポーネント枠 (Default)' },
+        { var: '--color-border-muted', desc: 'さらに控えめな極薄ミュート区切り線 (Muted)' },
+        { var: '--color-border-focus', desc: 'キーボードフォーカス・選択アウトライン (Sky)' },
+        { var: '--color-border-danger', desc: 'エラー・入力バリデーション失敗枠 (Berry)' }
+      ]
+    },
+    {
+      title: '🎭 State Layers (半透明インタラクション・ベール)',
+      desc: 'あらゆるボタン・コンポーネントの上に優しく重なり、触覚的リプライを生み出す光と影の半透明レイヤー',
+      tokens: [
+        { var: '--color-state-hover', desc: 'ホバー時ベール (Lightは静かな影、Darkは月光のような白ツヤ)' },
+        { var: '--color-state-active', desc: 'アクティブ・クリック時のベール (しっかりした押しごたえ)' }
+      ]
+    }
   ];
 
   const rootStyles = getComputedStyle(document.documentElement);
@@ -130,8 +175,11 @@ document.addEventListener('DOMContentLoaded', () => {
           const info = document.createElement('div');
           info.className = 'color-tile-info';
 
-          // 階調ステップ番号や名称(50, 600, glass等)を抽出
-          const stepName = varName.split('-').pop() || varName;
+          // 階調ステップ番号や名称(50, 600, glass等)を抽出（ニュートラル統合パレットは役割名 milk-200, latte-300 など明記して美しく表現）
+          let stepName = varName.split('-').pop() || varName;
+          if (varName.includes('milk') || varName.includes('latte') || varName.includes('espresso')) {
+            stepName = varName.replace('--color-base-', '');
+          }
 
           const nameEl = document.createElement('div');
           nameEl.className = 'color-step-name';
@@ -155,36 +203,77 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Semantic カラーの描画
+  // Semantic カラーの描画 (Muted仕様・直感的カードグリッド)
   const semanticList = document.getElementById('semantic-list');
   if (semanticList) {
-    semanticColors.forEach(varName => {
-      const hexValue = rootStyles.getPropertyValue(varName).trim();
-      if (!hexValue) return;
+    semanticGroups.forEach(group => {
+      const section = document.createElement('div');
+      section.className = 'semantic-group-section';
 
-      const item = document.createElement('div');
-      item.className = 'semantic-item';
+      const header = document.createElement('div');
+      header.className = 'semantic-group-header';
+      header.innerHTML = `
+        <h3 class="semantic-group-title">${group.title}</h3>
+        <p class="semantic-group-desc">${group.desc}</p>
+      `;
+      section.appendChild(header);
 
-      const swatch = document.createElement('div');
-      swatch.className = 'semantic-swatch';
-      swatch.style.backgroundColor = `var(${varName})`;
+      const grid = document.createElement('div');
+      grid.className = 'semantic-grid';
 
-      const details = document.createElement('div');
-      details.className = 'semantic-details';
+      group.tokens.forEach(token => {
+        const hexValue = rootStyles.getPropertyValue(token.var).trim();
+        if (!hexValue) return;
 
-      const name = document.createElement('div');
-      name.className = 'semantic-name';
-      name.textContent = varName.replace('--color-', '');
+        const card = document.createElement('div');
+        card.className = 'semantic-card';
 
-      const val = document.createElement('div');
-      val.className = 'semantic-value';
-      val.textContent = hexValue; // Computed CSS value
+        const swatchWrapper = document.createElement('div');
+        swatchWrapper.className = 'semantic-swatch-wrapper';
 
-      details.appendChild(name);
-      details.appendChild(val);
-      item.appendChild(swatch);
-      item.appendChild(details);
-      semanticList.appendChild(item);
+        // 役割(bg / text / border)による視覚的サンプル表示のスイッチ
+        if (token.var.includes('-text-')) {
+          const textSample = document.createElement('div');
+          textSample.className = 'swatch-text-sample';
+          textSample.textContent = 'Ag';
+          textSample.style.color = `var(${token.var})`;
+          swatchWrapper.appendChild(textSample);
+        } else if (token.var.includes('-border-')) {
+          const borderSample = document.createElement('div');
+          borderSample.className = 'swatch-border-sample';
+          borderSample.style.border = `3px solid var(${token.var})`;
+          swatchWrapper.appendChild(borderSample);
+        } else if (token.var.includes('-state-')) {
+          // 半透明ベールが直感的に伝わるようにプライマリー色の上にかけるミニサンプル表現
+          swatchWrapper.style.backgroundColor = 'var(--color-bg-primary)';
+          const overlaySample = document.createElement('div');
+          overlaySample.style.position = 'absolute';
+          overlaySample.style.inset = '0';
+          overlaySample.style.backgroundColor = `var(${token.var})`;
+          swatchWrapper.appendChild(overlaySample);
+        } else {
+          // 背景色 (bg) はスワッチ自体に色を適用
+          swatchWrapper.style.backgroundColor = `var(${token.var})`;
+          if (token.var.includes('glass')) {
+            swatchWrapper.style.backgroundImage = 'repeating-linear-gradient(45deg, rgba(0,0,0,0.05) 0, rgba(0,0,0,0.05) 8px, transparent 0, transparent 16px)';
+          }
+        }
+
+        const details = document.createElement('div');
+        details.className = 'semantic-details';
+        details.innerHTML = `
+          <div class="semantic-var-name">${token.var.replace('--color-', '')}</div>
+          <div class="semantic-description">${token.desc}</div>
+          <div class="semantic-hex">${hexValue}</div>
+        `;
+
+        card.appendChild(swatchWrapper);
+        card.appendChild(details);
+        grid.appendChild(card);
+      });
+
+      section.appendChild(grid);
+      semanticList.appendChild(section);
     });
   }
 });

@@ -4,32 +4,21 @@
       "milk": {
         "50":  { "$value": "#ffffff", "$type": "color" },
         "100": { "$value": "#fefcf9", "$type": "color" },
-        "200": { "$value": "#fdfbf7", "$type": "color" },
-        "300": { "$value": "#f8f4ed", "$type": "color" },
-        "400": { "$value": "#f2ebe0", "$type": "color" },
+        "200": { "$value": "#fdf8f2", "$type": "color" },
         "glass": { "$value": "rgba(253, 251, 247, 0.75)", "$type": "color" }
       },
+      "latte": {
+        "300": { "$value": "#f4ede4", "$type": "color" },
+        "400": { "$value": "#e2d5c8", "$type": "color" },
+        "500": { "$value": "#beab98", "$type": "color" },
+        "600": { "$value": "#998471", "$type": "color" }
+      },
       "espresso": {
-        "500": { "$value": "#5c4a3d", "$type": "color" },
-        "600": { "$value": "#4a3b30", "$type": "color" },
-        "700": { "$value": "#3b2e24", "$type": "color" },
-        "800": { "$value": "#2c221a", "$type": "color" },
-        "900": { "$value": "#1d1611", "$type": "color" },
+        "700": { "$value": "#735f4c", "$type": "color" },
+        "800": { "$value": "#4d3c2e", "$type": "color" },
+        "900": { "$value": "#2b2017", "$type": "color" },
         "950": { "$value": "#140e0b", "$type": "color" },
         "glass": { "$value": "rgba(29, 22, 17, 0.75)", "$type": "color" }
-      },
-      "latte": {
-        "50":  { "$value": "#fcfaf8", "$type": "color" },
-        "100": { "$value": "#f6f2ee", "$type": "color" },
-        "200": { "$value": "#eae3dc", "$type": "color" },
-        "300": { "$value": "#dacfc4", "$type": "color" },
-        "400": { "$value": "#c5b6a7", "$type": "color" },
-        "500": { "$value": "#a99583", "$type": "color" },
-        "600": { "$value": "#8c7968", "$type": "color" },
-        "700": { "$value": "#706051", "$type": "color" },
-        "800": { "$value": "#554a3e", "$type": "color" },
-        "900": { "$value": "#3d352c", "$type": "color" },
-        "950": { "$value": "#29231d", "$type": "color" }
       },
       "sky": {
         "50":  { "$value": "#f0f7ff", "$type": "color" },

@@ -21,8 +21,11 @@
   ],
   "tokens": {
     "bg": {
-      "default": { "$value": "{color.bg.primary}", "$type": "color" },
-      "hover": { "$value": "{color.bg.primaryHover}", "$type": "color" }
+      "default": { "$value": "{color.bg.primary}", "$type": "color" }
+    },
+    "state": {
+      "hover": { "$value": "{color.state.hover}", "$type": "color" },
+      "active": { "$value": "{color.state.active}", "$type": "color" }
     },
     "text": {
       "default": { "$value": "{color.text.inverse}", "$type": "color" }
