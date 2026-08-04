@@ -293,14 +293,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const sizeShowcase = document.getElementById('typo-size-showcase');
   if (sizeShowcase) {
     const sizeScale = [
-      { varName: '--font-size-4xl', val: '36px (2.25rem)', desc: 'ヒーロー・巨大見出し用', text: 'Milklab Agentic Design' },
-      { varName: '--font-size-3xl', val: '30px (1.875rem)', desc: 'ページタイトル・主要見出し用', text: 'カフェの温もりと最先端エージェントの調和' },
-      { varName: '--font-size-2xl', val: '24px (1.5rem)', desc: 'カード見出し・セクションタイトル用', text: '透明感あるステータスベールとミュートカラー' },
-      { varName: '--font-size-xl', val: '20px (1.25rem)', desc: '小見出し・モーダルヘッダー用', text: 'Outfit & Noto Sans JP' },
-      { varName: '--font-size-lg', val: '18px (1.125rem)', desc: 'リード文章・少し大きめの本文', text: '心地よく直感的なコンポーネントシステムを構築します' },
-      { varName: '--font-size-base', val: '16px (1rem)', desc: '【標準本文】ベースラインとなるサイズ', text: '標準的な文章や主要UI部品に最適な基準サイズです。すべてはここを起点に美しい比率で構成されています。' },
-      { varName: '--font-size-sm', val: '14px (0.875rem)', desc: 'セカンダリボタン・補足コメント用', text: 'サブ情報、メタインフォメーションおよび各種ボタン・ラベル (14px / Medium)' },
-      { varName: '--font-size-xs', val: '12px (0.75rem)', desc: 'バッジ・注釈・免責事項・フッターコピー用', text: 'バッジやミニタグ、注釈および補足情報用のコンパクトなスタイル。(12px)' }
+      { varName: '--font-size-4xl', val: '36px (2.25rem)', desc: 'ヒーロー・巨大見出し用', text: 'Milklab はAIと心地よい空間をデザインする研究所です' },
+      { varName: '--font-size-3xl', val: '30px (1.875rem)', desc: 'ページタイトル・主要見出し用', text: 'Milklab はAIと心地よい空間をデザインする研究所です' },
+      { varName: '--font-size-2xl', val: '24px (1.5rem)', desc: 'カード見出し・セクションタイトル用', text: 'Milklab はAIと心地よい空間をデザインする研究所です' },
+      { varName: '--font-size-xl', val: '20px (1.25rem)', desc: '小見出し・モーダルヘッダー用', text: 'Milklab はAIと心地よい空間をデザインする研究所です' },
+      { varName: '--font-size-lg', val: '18px (1.125rem)', desc: 'リード文章・少し大きめの本文', text: 'Milklab はAIと心地よい空間をデザインする研究所です' },
+      { varName: '--font-size-base', val: '16px (1rem)', desc: '【標準本文】ベースラインとなるサイズ', text: 'Milklab はAIと心地よい空間をデザインする研究所です' },
+      { varName: '--font-size-sm', val: '14px (0.875rem)', desc: 'セカンダリボタン・補足コメント用', text: 'Milklab はAIと心地よい空間をデザインする研究所です' },
+      { varName: '--font-size-xs', val: '12px (0.75rem)', desc: 'バッジ・注釈・免責事項・フッターコピー用', text: 'Milklab はAIと心地よい空間をデザインする研究所です' }
     ];
 
     sizeScale.forEach(item => {
@@ -317,6 +317,36 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
       `;
       sizeShowcase.appendChild(card);
+    });
+  }
+
+  // 1.5 Fluid & Character Capacity Typography (流動的・文字数設計フォント)
+  const fluidShowcase = document.getElementById('typo-fluid-showcase');
+  if (fluidShowcase) {
+    const fluidScale = [
+      { varName: '--font-size-fluid-2xl', val: '28px ~ 48px (1.75rem ~ 3rem)', desc: 'トップヒーロー大見出し・圧巻と調和のバランス', text: 'Milklab はAIと心地よい空間をデザインする研究所です' },
+      { varName: '--font-size-fluid-xl', val: '22px ~ 32px (1.375rem ~ 2rem)', desc: '主要セクション見出し・力強く上品な伸縮比率', text: 'Milklab はAIと心地よい空間をデザインする研究所です' },
+      { varName: '--font-size-fluid-lg', val: '18px ~ 22px (1.125rem ~ 1.375rem)', desc: 'リード文章・上品にスケールする長めコメント', text: 'Milklab はAIと心地よい空間をデザインする研究所です' },
+      { varName: '--font-size-fluid-base', val: '16px ~ 20px (1rem ~ 1.25rem)', desc: '可変本文・大画面で広がりを感じさせるベースライン', text: 'Milklab はAIと心地よい空間をデザインする研究所です' },
+      { varName: '--font-size-fluid-col15', val: '80vw / 15字 (20px ~ 28px)', desc: '【1行約15文字収容保証】ショートキャッチ・タイトルカード用', text: 'Milklab はAIと心地よい空間をデザインする研究所です' },
+      { varName: '--font-size-fluid-col20', val: '80vw / 20字 (16px ~ 22px)', desc: '【1行約20文字収容保証・奇跡の4.0vw】王道ハイライト・説明テキスト', text: 'Milklab はAIと心地よい空間をデザインする研究所です' },
+      { varName: '--font-size-fluid-col30', val: '80vw / 30字 (14px ~ 18px)', desc: '【1行約30文字収容保証】密度あるパラグラフや解説ドキュメント用', text: 'Milklab はAIと心地よい空間をデザインする研究所です' }
+    ];
+
+    fluidScale.forEach(item => {
+      const card = document.createElement('div');
+      card.className = 'typography-card';
+      card.innerHTML = `
+        <div class="typography-header-row">
+          <span class="typography-var-name">${item.varName.replace('--font-size-', '')}</span>
+          <span class="typography-val">${item.val}</span>
+          <span class="typography-desc">${item.desc}</span>
+        </div>
+        <div class="typography-sample" style="font-family: var(--font-family-sans); font-size: var(${item.varName}); font-weight: 500; line-height: var(--font-lineHeight-relaxed);">
+          ${item.text}
+        </div>
+      `;
+      fluidShowcase.appendChild(card);
     });
   }
 
