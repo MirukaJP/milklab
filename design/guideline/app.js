@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // コンセプトごとにグルーピング・段（行）配置されたPrimitiveトークン設計
   const primitiveColorGroups = [
     {
-      name: '🥛☕ Café Neutrals (Milk, Latte & Espresso)',
+      name: 'Café Neutrals (Milk, Latte & Espresso)',
       desc: '朝のミルク(50-200)、調和するカフェラテ(300-600)、そして深見のビターなエスプレッソ(700-950)を一続きにした、究極に美しい一本のメインキャンバススケール',
       rows: [
         [
@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
       ]
     },
     {
-      name: '🌅🌌 Sky (Scenery & Time)',
+      name: 'Sky (Scenery & Time)',
       desc: '窓辺の快晴の朝食タイムから、日中のクリアな青（Primary）、そして静けさにとけゆく夜空の星陰まで',
       rows: [
         [
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
       ]
     },
     {
-      name: '🍞🥧 Toast (Food & Dessert - Warning)',
+      name: 'Toast (Food & Dessert - Warning)',
       desc: '朝のシリアルやとろけるバターから、香ばしくこんがり焼けたトースト、そして夜想のタルト・焼き菓子まで',
       rows: [
         [
@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
       ]
     },
     {
-      name: '🍓 Berry (Food & Dessert - Danger/Error)',
+      name: 'Berry (Food & Dessert - Danger/Error)',
       desc: '朝の軽やかで可憐ないちごミルクから、暗がりでシックに映える夜食のフランボワーズまで',
       rows: [
         [
@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
       ]
     },
     {
-      name: '🌿 Herb (Room & Decoration - Success)',
+      name: 'Herb (Room & Decoration - Success)',
       desc: '朝採り野菜サラダやミントから、就寝前の温かく心を沈静させるハーブティー・緑茶まで',
       rows: [
         [
@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
       ]
     },
     {
-      name: '💜 Lavender (Room & Decoration - Relax & Magic)',
+      name: 'Lavender (Room & Decoration - Relax & Magic)',
       desc: '朝のさわやかな涼みとハーブの香りから、夜のひとり時間を優しく包んで極上の安眠と集中を導くアロマ・バイオレット',
       rows: [
         [
@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const semanticGroups = [
     {
-      title: '📦 Background & Surface (生活空間とレイヤー)',
+      title: 'Background & Surface (生活空間とレイヤー)',
       desc: '画面全体の背景からカード面、そして控えめなコンテナエリア(Muted)の構成',
       tokens: [
         { var: '--color-bg-default', desc: 'メイン背景色 (Default)' },
@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
       ]
     },
     {
-      title: '🛡️ Status & Feature Backgrounds (状態・フィードバック背景)',
+      title: 'Status & Feature Backgrounds (状態・フィードバック背景)',
       desc: 'ハーブ・トースト・ベリー・ラベンダーを役割（成功・警告・エラー・アクセント）として割り振った標準背景色およびミュート（バッジ・通知用）背景',
       tokens: [
         { var: '--color-bg-success', desc: '成功・安全・完了背景 (Herb)' },
@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
       ]
     },
     {
-      title: '✍️ Text & Typography (文字・アイコン色)',
+      title: 'Text & Typography (文字・アイコン色)',
       desc: '厳格なアクセシビリティを保つテキスト群。色見本は文字「Ag」で体感できます',
       tokens: [
         { var: '--color-text-default', desc: '基本テキスト (Default)' },
@@ -113,13 +113,13 @@ document.addEventListener('DOMContentLoaded', () => {
       ]
     },
     {
-      title: '📐 Border & Dividers (境界線・アウトライン)',
+      title: 'Border & Dividers (境界線・アウトライン)',
       desc: '空間と UI の輪郭を引き締めたり、ステータスを際立たせる充実した線定義。枠線サンプルで体感いただけます',
       tokens: [
         { var: '--color-border-default', desc: '標準的な区切り線・コンポーネント枠 (Default)' },
         { var: '--color-border-muted', desc: 'さらに控えめな極薄ミュート区切り線 (Muted)' },
         { var: '--color-border-focus', desc: 'キーボードフォーカス・選択アウトライン (Sky)' },
-        { var: '--color-border-primary', desc: 'プライマリ選択・強調フレーム線 (Sky)' },
+        { var: '--color-border-primary', desc: 'プライマリー選択・強調フレーム線 (Sky)' },
         { var: '--color-border-success', desc: '成功・安全ステータス枠線 (Herb)' },
         { var: '--color-border-success-muted', desc: '成功バッジ・通知用ミュート枠線 (Herb Muted)' },
         { var: '--color-border-warning', desc: '注意・警告ステータス枠線 (Toast)' },
@@ -131,7 +131,7 @@ document.addEventListener('DOMContentLoaded', () => {
       ]
     },
     {
-      title: '🎭 State Layers (半透明インタラクション・ベール)',
+      title: 'State Layers (半透明インタラクション・ベール)',
       desc: '無機質な黒の影を排し、システム根幹の Espresso-900 や Milk 50 をベースにした温かみ溢れる光と影の半透明レイヤー',
       tokens: [
         { var: '--color-state-hover', desc: 'ホバー時ベール (Light は Espresso-900 由来の芳醇で深い影、Dark は月光のような Milk ツヤ)' },
