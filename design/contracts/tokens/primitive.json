@@ -102,5 +102,32 @@
       "4": { "$value": "1rem", "$type": "dimension" },
       "8": { "$value": "2rem", "$type": "dimension" }
     }
+  },
+  "font": {
+    "family": {
+      "sans": { "$value": "'Outfit', 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', sans-serif", "$type": "fontFamily", "$description": "近未来的な幾何学性とカフェの親しみやすさが最高に溶け合う王道のモダンフォント" }
+    },
+    "size": {
+      "xs": { "$value": "0.75rem", "$type": "dimension", "$description": "12px: バッジ・注釈・補足用" },
+      "sm": { "$value": "0.875rem", "$type": "dimension", "$description": "14px: セカンダリ・サブ情報用" },
+      "base": { "$value": "1rem", "$type": "dimension", "$description": "16px: 本文・基準サイズ" },
+      "lg": { "$value": "1.125rem", "$type": "dimension", "$description": "18px: リード文・小見出し用" },
+      "xl": { "$value": "1.25rem", "$type": "dimension", "$description": "20px: セクションタイトル用" },
+      "2xl": { "$value": "1.5rem", "$type": "dimension", "$description": "24px: 中見出し用" },
+      "3xl": { "$value": "1.875rem", "$type": "dimension", "$description": "30px: ページ見出し用" },
+      "4xl": { "$value": "2.25rem", "$type": "dimension", "$description": "36px: ヒーロー・大見出し用" }
+    },
+    "weight": {
+      "regular": { "$value": 400, "$type": "fontWeight", "$description": "標準・本文" },
+      "medium": { "$value": 500, "$type": "fontWeight", "$description": "中太・ボタンやアクティブタブ用" },
+      "semibold": { "$value": 600, "$type": "fontWeight", "$description": "やや太・見出しや強調用" },
+      "bold": { "$value": 700, "$type": "fontWeight", "$description": "極太・大見出し・目立つラベル用" }
+    },
+    "lineHeight": {
+      "tight": { "$value": 1.25, "$type": "lineHeight", "$description": "見出し向け・タイトな行間" },
+      "normal": { "$value": 1.5, "$type": "lineHeight", "$description": "標準UI・短文向けの均整の取れた行間" },
+      "relaxed": { "$value": 1.75, "$type": "lineHeight", "$description": "長文ドキュメント・記事向けのゆったりした可読性行間" },
+      "loose": { "$value": 2, "$type": "lineHeight", "$description": "さらに行間の広い開放的・詩的な長文および広大スペース向けの行間" }
+    }
   }
 }

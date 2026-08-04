@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="main.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -21,6 +21,7 @@
     <nav>
       <a href="#demo" class="active">Milky Glass</a>
       <a href="#colors">Colors</a>
+      <a href="#typography">Typography</a>
       <a href="#components">Components</a>
     </nav>
   </div>
@@ -56,6 +57,44 @@
       <h2 style="margin-top: 4rem;">Semantic Colors</h2>
       <div class="semantic-groups-container" id="semantic-list">
         <!-- Rendered by JS -->
+      </div>
+    </section>
+
+    <section id="typography" style="margin-top: 4rem;">
+      <h2>Typography</h2>
+      <div class="semantic-groups-container" id="typography-groups">
+        <!-- Font Size -->
+        <div class="semantic-group-section">
+          <div class="semantic-group-header">
+            <h3 class="semantic-group-title">Font Size</h3>
+            <p class="semantic-group-desc">文字サイズ（階調スケール）。基準となる本文から、注釈、ヒーロー見出しまでの役割スケールです。</p>
+          </div>
+          <div id="typo-size-showcase" class="typography-list">
+            <!-- Rendered by JS -->
+          </div>
+        </div>
+
+        <!-- Font Weight -->
+        <div class="semantic-group-section">
+          <div class="semantic-group-header">
+            <h3 class="semantic-group-title">Font Weight</h3>
+            <p class="semantic-group-desc">文字の太さ。同じサイズでも骨格のウェイトにより適切な強弱と視線をコントロールします。</p>
+          </div>
+          <div id="typo-weight-showcase" class="typography-list">
+            <!-- Rendered by JS -->
+          </div>
+        </div>
+
+        <!-- Line Height -->
+        <div class="semantic-group-section">
+          <div class="semantic-group-header">
+            <h3 class="semantic-group-title">Line Height</h3>
+            <p class="semantic-group-desc">行間・余白の密度。見出し向きの引き締められた配置と、快適に読み進めるための贅沢な長文余白を提供します。</p>
+          </div>
+          <div id="typo-lh-showcase" class="typography-list">
+            <!-- Rendered by JS -->
+          </div>
+        </div>
       </div>
     </section>
 

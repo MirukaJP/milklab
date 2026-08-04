@@ -77,6 +77,23 @@
   --spacing-base-2: 0.5rem;
   --spacing-base-4: 1rem;
   --spacing-base-8: 2rem;
+  --font-family-sans: 'Outfit', 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', sans-serif;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-size-4xl: 2.25rem;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-lineHeight-tight: 1.25;
+  --font-lineHeight-normal: 1.5;
+  --font-lineHeight-relaxed: 1.75;
+  --font-lineHeight-loose: 2;
 }
 
 :root, [data-theme="light"] {

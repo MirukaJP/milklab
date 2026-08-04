@@ -284,4 +284,96 @@ document.addEventListener('DOMContentLoaded', () => {
       semanticList.appendChild(section);
     });
   }
+
+  // ============================
+  // ✍️ Typography Showcase (Colorセクションと完全調和する静的トンマナ見本)
+  // ============================
+
+  // 1. Font Size (文字の階調スケール)
+  const sizeShowcase = document.getElementById('typo-size-showcase');
+  if (sizeShowcase) {
+    const sizeScale = [
+      { varName: '--font-size-4xl', val: '36px (2.25rem)', desc: 'ヒーロー・巨大見出し用', text: 'Milklab Agentic Design' },
+      { varName: '--font-size-3xl', val: '30px (1.875rem)', desc: 'ページタイトル・主要見出し用', text: 'カフェの温もりと最先端エージェントの調和' },
+      { varName: '--font-size-2xl', val: '24px (1.5rem)', desc: 'カード見出し・セクションタイトル用', text: '透明感あるステータスベールとミュートカラー' },
+      { varName: '--font-size-xl', val: '20px (1.25rem)', desc: '小見出し・モーダルヘッダー用', text: 'Outfit & Noto Sans JP' },
+      { varName: '--font-size-lg', val: '18px (1.125rem)', desc: 'リード文章・少し大きめの本文', text: '心地よく直感的なコンポーネントシステムを構築します' },
+      { varName: '--font-size-base', val: '16px (1rem)', desc: '【標準本文】ベースラインとなるサイズ', text: '標準的な文章や主要UI部品に最適な基準サイズです。すべてはここを起点に美しい比率で構成されています。' },
+      { varName: '--font-size-sm', val: '14px (0.875rem)', desc: 'セカンダリボタン・補足コメント用', text: 'サブ情報、メタインフォメーションおよび各種ボタン・ラベル (14px / Medium)' },
+      { varName: '--font-size-xs', val: '12px (0.75rem)', desc: 'バッジ・注釈・免責事項・フッターコピー用', text: 'バッジやミニタグ、注釈および補足情報用のコンパクトなスタイル。(12px)' }
+    ];
+
+    sizeScale.forEach(item => {
+      const card = document.createElement('div');
+      card.className = 'typography-card';
+      card.innerHTML = `
+        <div class="typography-header-row">
+          <span class="typography-var-name">${item.varName.replace('--font-size-', '')}</span>
+          <span class="typography-val">${item.val}</span>
+          <span class="typography-desc">${item.desc}</span>
+        </div>
+        <div class="typography-sample" style="font-family: var(--font-family-sans); font-size: var(${item.varName}); font-weight: 500; line-height: var(--font-lineHeight-normal);">
+          ${item.text}
+        </div>
+      `;
+      sizeShowcase.appendChild(card);
+    });
+  }
+
+  // 2. Font Weight (文字の太さ)
+  const weightShowcase = document.getElementById('typo-weight-showcase');
+  if (weightShowcase) {
+    const weightScale = [
+      { varName: '--font-weight-regular', val: '400', desc: '標準・長文テキストの基本ウェイト' },
+      { varName: '--font-weight-medium', val: '500', desc: '中太・ボタンラベルや選択中タブ、少し視線を集めたい要素用' },
+      { varName: '--font-weight-semibold', val: '600', desc: 'やや太・見出しや強調カードのヘッダータイトル用' },
+      { varName: '--font-weight-bold', val: '700', desc: '極太・ページ大見出しや最上位インパクトを持たせるテキスト用' }
+    ];
+
+    weightScale.forEach(item => {
+      const card = document.createElement('div');
+      card.className = 'typography-card';
+      card.innerHTML = `
+        <div class="typography-header-row">
+          <span class="typography-var-name">${item.varName.replace('--font-weight-', '')}</span>
+          <span class="typography-val">${item.val}</span>
+          <span class="typography-desc">${item.desc}</span>
+        </div>
+        <div class="typography-sample" style="font-family: var(--font-family-sans); font-size: var(--font-size-2xl); font-weight: var(${item.varName}); line-height: var(--font-lineHeight-normal);">
+          Outfit & Noto Sans JP (Weight ${item.val})
+        </div>
+      `;
+      weightShowcase.appendChild(card);
+    });
+  }
+
+  // 3. Line Height (行間・密度)
+  const lhShowcase = document.getElementById('typo-lh-showcase');
+  if (lhShowcase) {
+    const lhScale = [
+      { varName: '--font-lineHeight-tight', val: '1.25', desc: '見出し専用・空間を引き締めインパクトを高める凝縮感' },
+      { varName: '--font-lineHeight-normal', val: '1.5', desc: 'UIボタン・短文説明・通常のインターフェースにおける最適バランス' },
+      { varName: '--font-lineHeight-relaxed', val: '1.75', desc: '長文ドキュメント・記事・ガイドライン用のゆとりある贅沢な行間' },
+      { varName: '--font-lineHeight-loose', val: '2', desc: 'さらに行間の広い、開放的で余白リッチな空間演出および特別な長文ドキュメント用' }
+    ];
+
+    const sampleParagraph = 'Milklab デザインシステムは、温かく居心地の良いカフェ空間の美しさと、先進的でダイナミックな AI コーディングを融合させています。文字と文字の余白に息遣いをもたせ、ライトモードにはコーヒーの芳醇な陰影を、ダークモードには月光のようなツヤを与えることで、触感と美意識を満たすプロダクト体験を約束します。';
+
+    lhScale.forEach(item => {
+      const card = document.createElement('div');
+      card.className = 'typography-card';
+      card.innerHTML = `
+        <div class="typography-header-row">
+          <span class="typography-var-name">${item.varName.replace('--font-lineHeight-', '')}</span>
+          <span class="typography-val">${item.val}</span>
+          <span class="typography-desc">${item.desc}</span>
+        </div>
+        <div class="typography-sample" style="font-family: var(--font-family-sans); font-size: var(--font-size-base); font-weight: 400; line-height: var(${item.varName});">
+          ${sampleParagraph}
+        </div>
+      `;
+      lhShowcase.appendChild(card);
+    });
+  }
 });
+
