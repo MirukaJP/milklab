@@ -405,5 +405,134 @@ document.addEventListener('DOMContentLoaded', () => {
       lhShowcase.appendChild(card);
     });
   }
-});
 
+  // ============================================
+  // Spacing & Layout Architecture Showcase 描画
+  // ============================================
+
+  // 1. Static Scale & Micro Optical Adjusters
+  const staticShowcase = document.getElementById('space-static-showcase');
+  if (staticShowcase) {
+    const staticItems = [
+      { var: '--spacing-base-0', name: 'base-0', val: '0', desc: '0px: ゼロ余白' },
+      { var: '--spacing-base-px', name: 'base-px', val: '1px (0.0625rem)', desc: '錯視・ストローク・極小オフセット補正用' },
+      { var: '--spacing-base-2px', name: 'base-2px', val: '2px (0.125rem)', desc: '錯視・アイコン隣の微粒子補正用' },
+      { var: '--spacing-base-3px', name: 'base-3px', val: '3px (0.1875rem)', desc: '錯視・中央軸・ミニバッジ調整用' },
+      { var: '--spacing-base-1', name: 'base-1', val: '4px (0.25rem)', desc: '王道4pxグリッドの起点・極ミニギャップ' },
+      { var: '--spacing-base-2', name: 'base-2', val: '8px (0.5rem)', desc: '基準ミニマージン・コンパクトコンポーネント隙間' },
+      { var: '--spacing-base-3', name: 'base-3', val: '12px (0.75rem)', desc: 'リッチでまとまりのある内部パディング' },
+      { var: '--spacing-base-4', name: 'base-4', val: '16px (1rem)', desc: '王道の標準コンポーネント余白・カードパディング' },
+      { var: '--spacing-base-5', name: 'base-5', val: '20px (1.25rem)', desc: '豊かで軽やかな分離余白' },
+      { var: '--spacing-base-6', name: 'base-6', val: '24px (1.5rem)', desc: '大きなコンポーネント区切り・ゆったりとしたフォーム間' },
+      { var: '--spacing-base-8', name: 'base-8', val: '32px (2rem)', desc: 'モジュールや主要ブロック同士の美しい仕切り' },
+      { var: '--spacing-base-10', name: 'base-10', val: '40px (2.5rem)', desc: '重大なレイアウトブロック間の独立感ある境界' },
+      { var: '--spacing-base-12', name: 'base-12', val: '48px (3rem)', desc: '心地の良い開放感と息遣いを演出するワイドマージン' },
+      { var: '--spacing-base-16', name: 'base-16', val: '64px (4rem)', desc: 'ラージセクション間の堂々とした仕切る領域' },
+      { var: '--spacing-base-20', name: 'base-20', val: '80px (5rem)', desc: 'トップレベルコンテンツやランディング領域の上下余白' },
+      { var: '--spacing-base-24', name: 'base-24', val: '96px (6rem)', desc: 'ヒーローバナー直後等の壮大なプロポーション' },
+      { var: '--spacing-base-32', name: 'base-32', val: '128px (8rem)', desc: '極上のヴィジョンと高級感を生む最大限の白銀空間' }
+    ];
+
+    staticItems.forEach(item => {
+      const card = document.createElement('div');
+      card.className = 'spacing-card';
+      const isMicro = item.val.includes('1px') || item.val.includes('2px') || item.val.includes('3px');
+
+      card.innerHTML = `
+        <div class="typography-header-row">
+          <span class="typography-var-name">${item.name}</span>
+          <span class="typography-val">${item.val}</span>
+          <span class="typography-desc">${item.desc}</span>
+        </div>
+        <div class="spacing-sample-container">
+          <div class="spacing-sample-box"></div>
+          <div class="spacing-gap-indicator" style="width: var(${item.var}, ${item.val.split(' ')[0]}); ${isMicro ? 'min-width: ' + item.val.split(' ')[0] + ';' : ''}"></div>
+          <div class="spacing-sample-box"></div>
+        </div>
+      `;
+      staticShowcase.appendChild(card);
+    });
+  }
+
+  // 2. Proportional Scale (em連動)
+  const emShowcase = document.getElementById('space-em-showcase');
+  if (emShowcase) {
+    const emItems = [
+      { var: '--spacing-em-2xs', name: 'em-2xs', val: '0.25em', desc: 'フォント同期: アイコンとテキスト間の締まった気高いギャップ' },
+      { var: '--spacing-em-xs', name: 'em-xs', val: '0.5em', desc: 'フォント同期: 半文字分の心地の良いリズム・軽やかなインライン分離' },
+      { var: '--spacing-em-sm', name: 'em-sm', val: '0.75em', desc: 'フォント同期: 見出しやリスト間におけるスマートな間引き' },
+      { var: '--spacing-em-base', name: 'em-base', val: '1em', desc: 'フォント同期: ジャスト1文字分・確実で自然な段落・ブロック隔たり' },
+      { var: '--spacing-em-lg', name: 'em-lg', val: '1.5em', desc: 'フォント同期: 見出し手前など、グループ構成をドラマチックに分割' },
+      { var: '--spacing-em-xl', name: 'em-xl', val: '2em', desc: 'フォント同期: 2文字分の深いブランクエリア・明示的な切り離し' }
+    ];
+
+    emItems.forEach(item => {
+      const card = document.createElement('div');
+      card.className = 'spacing-card';
+      card.innerHTML = `
+        <div class="typography-header-row">
+          <span class="typography-var-name">${item.name}</span>
+          <span class="typography-val">${item.val}</span>
+          <span class="typography-desc">${item.desc}</span>
+        </div>
+        <div class="spacing-sample-container" style="font-size: var(--font-size-fluid-xl, 24px);">
+          <div class="spacing-sample-box"></div>
+          <div class="spacing-gap-indicator" style="width: var(${item.var}, ${item.val});"></div>
+          <div class="spacing-sample-box"></div>
+        </div>
+      `;
+      emShowcase.appendChild(card);
+    });
+  }
+
+  // 3. Fluid Macro Scale (Viewport可変)
+  const spaceFluidShowcase = document.getElementById('space-fluid-showcase');
+  if (spaceFluidShowcase) {
+    const fluidItems = [
+      { var: '--spacing-fluid-xs', name: 'fluid-xs', val: '8px ~ 12px', desc: '小さな可変隙間・スマホとPCでスマートに微調整' },
+      { var: '--spacing-fluid-sm', name: 'fluid-sm', val: '12px ~ 16px', desc: '気軽なモジュール間隔・レイアウトの密度自動調整' },
+      { var: '--spacing-fluid-base', name: 'fluid-base', val: '16px ~ 24px', desc: '王道標準・カード同士や主要セクション内部の可変距離感' },
+      { var: '--spacing-fluid-lg', name: 'fluid-lg', val: '24px ~ 40px', desc: 'ブロックや主要要素の仕切り・ウィンドウ幅に呼応する間取り' },
+      { var: '--spacing-fluid-xl', name: 'fluid-xl', val: '32px ~ 56px', desc: 'セクション間の優雅な間取り・レスポンシブデザインの主役' },
+      { var: '--spacing-fluid-2xl', name: 'fluid-2xl', val: '40px ~ 80px', desc: '広域セクション間取り・至極の開放感と高級感演出' }
+    ];
+
+    fluidItems.forEach(item => {
+      const card = document.createElement('div');
+      card.className = 'spacing-card';
+      card.innerHTML = `
+        <div class="typography-header-row">
+          <span class="typography-var-name">${item.name}</span>
+          <span class="typography-val">${item.val}</span>
+          <span class="typography-desc">${item.desc}</span>
+        </div>
+        <div class="spacing-sample-container">
+          <div class="spacing-sample-box"></div>
+          <div class="spacing-gap-indicator" style="width: var(${item.var}, 32px);"></div>
+          <div class="spacing-sample-box"></div>
+        </div>
+      `;
+      spaceFluidShowcase.appendChild(card);
+    });
+  }
+
+  // 4. Special Keyword (Auto)
+  const autoShowcase = document.getElementById('space-auto-showcase');
+  if (autoShowcase) {
+    const card = document.createElement('div');
+    card.className = 'spacing-card';
+    card.innerHTML = `
+      <div class="typography-header-row">
+        <span class="typography-var-name">auto</span>
+        <span class="typography-val">auto / Spacer / weight(1f)</span>
+        <span class="typography-desc">コンテナ内の余白自動充填・片側押出し・余白分配によるアライメント推進力</span>
+      </div>
+      <div class="spacing-sample-container">
+        <div class="spacing-sample-box"></div>
+        <div class="spacing-gap-indicator" style="flex-grow: 1;"></div>
+        <div class="spacing-sample-box"></div>
+      </div>
+    `;
+    autoShowcase.appendChild(card);
+  }
+});

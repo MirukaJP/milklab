@@ -33,7 +33,7 @@
         },
         "$type": {
           "type": "string",
-          "enum": ["color", "dimension", "fontSize", "fontFamily", "fontWeight", "lineHeight", "duration", "cubicBezier", "shadow"],
+          "enum": ["color", "dimension", "fontSize", "fontFamily", "fontWeight", "lineHeight", "duration", "cubicBezier", "shadow", "string", "keyword"],
           "description": "トークンの型"
         },
         "$description": {

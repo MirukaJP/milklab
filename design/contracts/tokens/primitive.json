@@ -97,11 +97,41 @@
   },
   "spacing": {
     "base": {
-      "1": { "$value": "0.25rem", "$type": "dimension" },
-      "2": { "$value": "0.5rem", "$type": "dimension" },
-      "4": { "$value": "1rem", "$type": "dimension" },
-      "8": { "$value": "2rem", "$type": "dimension" }
-    }
+      "0": { "$value": "0", "$type": "dimension", "$description": "0px: ゼロ余白" },
+      "px": { "$value": "0.0625rem", "$type": "dimension", "$description": "1px: 錯視・ストローク・極小オフセット補正用" },
+      "2px": { "$value": "0.125rem", "$type": "dimension", "$description": "2px: 錯視・アイコン隣の微粒子補正用" },
+      "3px": { "$value": "0.1875rem", "$type": "dimension", "$description": "3px: 錯視・中央軸・ミニバッジ調整用" },
+      "1": { "$value": "0.25rem", "$type": "dimension", "$description": "4px: グリッドの起点" },
+      "2": { "$value": "0.5rem", "$type": "dimension", "$description": "8px: 基準ミニマージン・ギャップ" },
+      "3": { "$value": "0.75rem", "$type": "dimension", "$description": "12px: リッチな内部パディング" },
+      "4": { "$value": "1rem", "$type": "dimension", "$description": "16px: 王道コンポーネント余白" },
+      "5": { "$value": "1.25rem", "$type": "dimension", "$description": "20px: 豊かな余白" },
+      "6": { "$value": "1.5rem", "$type": "dimension", "$description": "24px: 大きなコンポーネント区切り" },
+      "8": { "$value": "2rem", "$type": "dimension", "$description": "32px: モジュールやセクションの区切り" },
+      "10": { "$value": "2.5rem", "$type": "dimension", "$description": "40px: 重大ブロックの境界" },
+      "12": { "$value": "3rem", "$type": "dimension", "$description": "48px: スキマ感溢れる開放マージン" },
+      "16": { "$value": "4rem", "$type": "dimension", "$description": "64px: ラージセクション区切り" },
+      "20": { "$value": "5rem", "$type": "dimension", "$description": "80px: トップレベル余白" },
+      "24": { "$value": "6rem", "$type": "dimension", "$description": "96px: ヒーロー前後エリア用" },
+      "32": { "$value": "8rem", "$type": "dimension", "$description": "128px: 広大ヴィジョン余白" }
+    },
+    "em": {
+      "2xs": { "$value": "0.25em", "$type": "dimension", "$description": "フォント同期: アイコンとテキスト間の締まった気高いギャップ" },
+      "xs": { "$value": "0.5em", "$type": "dimension", "$description": "フォント同期: 半文字分の心地の良いリズム・軽やかなインライン分離" },
+      "sm": { "$value": "0.75em", "$type": "dimension", "$description": "フォント同期: 見出しやリスト間におけるスマートな間引き" },
+      "base": { "$value": "1em", "$type": "dimension", "$description": "フォント同期: ジャスト1文字分・確実で自然な段落・ブロック隔たり" },
+      "lg": { "$value": "1.5em", "$type": "dimension", "$description": "フォント同期: 見出し手前など、グループ構成をドラマチックに分割" },
+      "xl": { "$value": "2em", "$type": "dimension", "$description": "フォント同期: 2文字分の深いブランクエリア・明示的な切り離し" }
+    },
+    "fluid": {
+      "xs": { "$value": "clamp(0.5rem, 0.4rem + 0.5vw, 0.75rem)", "$type": "dimension", "$description": "流動スケール: 8px ~ 12px (小さな可変隙間)" },
+      "sm": { "$value": "clamp(0.75rem, 0.65rem + 0.4vw, 1rem)", "$type": "dimension", "$description": "流動スケール: 12px ~ 16px (気軽なモジュール間隔)" },
+      "base": { "$value": "clamp(1rem, 0.8rem + 0.8vw, 1.5rem)", "$type": "dimension", "$description": "流動スケール: 16px ~ 24px (標準・カード同士の可変距離感)" },
+      "lg": { "$value": "clamp(1.5rem, 1.1rem + 1.6vw, 2.5rem)", "$type": "dimension", "$description": "流動スケール: 24px ~ 40px (ブロックや主要要素の仕切り)" },
+      "xl": { "$value": "clamp(2rem, 1.4rem + 2.5vw, 3.5rem)", "$type": "dimension", "$description": "流動スケール: 32px ~ 56px (セクション間の優雅な間取り)" },
+      "2xl": { "$value": "clamp(2.5rem, 1.5rem + 4.0vw, 5rem)", "$type": "dimension", "$description": "流動スケール: 40px ~ 80px (広域セクション間取り・至極の開放感)" }
+    },
+    "auto": { "$value": "auto", "$type": "string", "$description": "余白充填・中央寄せ。アプリ変換時はSpacer()/Modifier.weight(1f)等に解釈" }
   },
   "font": {
     "family": {

@@ -109,6 +109,63 @@
       </div>
     </section>
 
+    <!-- Spacing System Showcase -->
+    <section id="spacing" style="margin-top: 5rem;">
+      <div class="semantic-section-title">
+        <h2>Spacing & Layout Architecture</h2>
+        <span class="badge">Hybrid Space Scale</span>
+      </div>
+      <p style="color: var(--text-sub); margin-bottom: 2.5rem; line-height: 1.6;">
+        「静的4pxグリッド」と「錯視補正 (Micro)」の厳密性、文字に呼吸同調する「em比例 (Proportional)」、そして画面幅で開放感を変える「Fluidセクションスケール」を融合した全領域対応の間取り戦略です。
+      </p>
+
+      <div class="semantic-groups-container">
+        <!-- Static Scale & Micro Adjustment -->
+        <div class="semantic-group-section">
+          <div class="semantic-group-header">
+            <h3 class="semantic-group-title">Static Scale & Micro Optical Adjuster</h3>
+            <p class="semantic-group-desc">厳密なレイアウトを支える王道の4pxグリッド（1〜32）と、アイコンや線画の軸補正専用の 1px, 2px, 3px 錯視オフセットスケールです。</p>
+          </div>
+          <div id="space-static-showcase" class="spacing-showcase-grid">
+            <!-- Rendered by JS -->
+          </div>
+        </div>
+
+        <!-- Proportional Scale -->
+        <div class="semantic-group-section">
+          <div class="semantic-group-header">
+            <h3 class="semantic-group-title">Proportional Scale (Font-Synchronized Space)</h3>
+            <p class="semantic-group-desc">単位に em を採用し、隣合う文字（親フォントサイズ）の伸び縮みに完全にシンクロして広がりや詰めをキープするインテリジェントな文字比例余白です。</p>
+          </div>
+          <div id="space-em-showcase" class="spacing-showcase-grid">
+            <!-- Rendered by JS -->
+          </div>
+        </div>
+
+        <!-- Fluid Macro Scale -->
+        <div class="semantic-group-section">
+          <div class="semantic-group-header">
+            <h3 class="semantic-group-title">Fluid Macro Scale (Viewport-Responsive Sepration)</h3>
+            <p class="semantic-group-desc">スマホ等での過剰な無駄余白を除去し、PCワイド画面では豪快に余白を開放する clamp() クラスの大空間セクション・コンテナスケールです。</p>
+          </div>
+          <div id="space-fluid-showcase" class="spacing-showcase-grid">
+            <!-- Rendered by JS -->
+          </div>
+        </div>
+
+        <!-- Special Keyword -->
+        <div class="semantic-group-section">
+          <div class="semantic-group-header">
+            <h3 class="semantic-group-title">Special Keyword (Platform-Transparent Auto Spacer)</h3>
+            <p class="semantic-group-desc">Web CSSでは auto、モバイルアプリ(iOS/Android) 変換時には Spacer() や Modifier.weight(1f) に該当する余白充填シンボルです。</p>
+          </div>
+          <div id="space-auto-showcase" class="spacing-showcase-grid">
+            <!-- Rendered by JS -->
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="components" style="margin-top: 4rem;">
       <h2>Components Preview (Powered by Transparent State Veil)</h2>
       <p style="color: var(--text-sub); margin-bottom: 1.5rem;">どのような背景色のコンポーネントでも、触れた瞬間に同じ質感の優雅な光・影のベールに満たされます。</p>

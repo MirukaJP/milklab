@@ -11,8 +11,8 @@
     "clear"
   ],
   "allowedUnits": {
-    "spacing": ["rem"],
-    "fontSize": ["rem", "em"],
+    "spacing": ["rem", "em", "vw", "px", "auto"],
+    "fontSize": ["rem", "em", "vw", "px"],
     "border": ["px"]
   },
   "a11y": {
