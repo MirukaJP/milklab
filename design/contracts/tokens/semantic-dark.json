@@ -1,7 +1,7 @@
 {
   "color": {
     "bg": {
-      "default": { "$value": "{color.base.espresso.900}", "$type": "color", "$description": "画面メイン背景" },
+      "base": { "$value": "{color.base.espresso.900}", "$type": "color", "$description": "画面メイン背景" },
       "surface": { "$value": "{color.base.espresso.950}", "$type": "color", "$description": "カード・サイドバーなどの手前レイヤー" },
       "muted": { "$value": "{color.base.espresso.800}", "$type": "color", "$description": "控えめな操作やコンテナの背景(Espresso 800)" },
       "glass": { "$value": "{color.base.espresso.glass}", "$type": "color", "$description": "すりガラス背景" },
@@ -16,7 +16,7 @@
       "accent-muted": { "$value": "{color.base.lavender.950}", "$type": "color", "$description": "アクセントの極深ミュート背景" }
     },
     "text": {
-      "default": { "$value": "{color.base.milk.200}", "$type": "color", "$description": "基本テキスト(Milk 200)" },
+      "base": { "$value": "{color.base.milk.200}", "$type": "color", "$description": "基本テキスト(Milk 200)" },
       "inverse": { "$value": "{color.base.milk.100}", "$type": "color", "$description": "反転・プライマリアクション等濃い背景上の白系テキスト" },
       "muted": { "$value": "{color.base.latte.400}", "$type": "color", "$description": "補助・ミュートテキスト(Latte 400)" },
       "disabled": { "$value": "{color.base.espresso.700}", "$type": "color", "$description": "無効・退行状態テキスト(Espresso 700)" },
@@ -27,7 +27,7 @@
       "accent": { "$value": "{color.base.lavender.300}", "$type": "color", "$description": "装飾・特別機能を彩るテキスト" }
     },
     "border": {
-      "default": { "$value": "{color.base.espresso.700}", "$type": "color", "$description": "標準的な区切り線・コンポーネント枠(Espresso 700)" },
+      "base": { "$value": "{color.base.espresso.700}", "$type": "color", "$description": "標準的な区切り線・コンポーネント枠(Espresso 700)" },
       "muted": { "$value": "{color.base.espresso.800}", "$type": "color", "$description": "さらに控えめな極深ミュート区切り線(Espresso 800)" },
       "focus": { "$value": "{color.base.sky.400}", "$type": "color", "$description": "キーボードフォーカス・選択時のアウトライン" },
       "primary": { "$value": "{color.base.sky.400}", "$type": "color", "$description": "プライマリアクション・選択中タブ等の強調グロウ枠" },

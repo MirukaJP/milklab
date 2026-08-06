@@ -15,6 +15,13 @@
     "fontSize": ["rem", "em", "vw", "px"],
     "border": ["px"]
   },
+  "namingRules": {
+    "forbiddenKeys": ["prop", "var", "val", "default", "type"]
+  },
+  "spacingRules": {
+    "gridBasePx": 4,
+    "allowedMicroOffsets": [1, 2, 3]
+  },
   "a11y": {
     "minimumContrastRatio": 4.5,
     "requireFocusVisible": true
